@@ -1,0 +1,22 @@
+<h2>Dashboard - Saved Passwords</h2>
+
+<form method="POST">
+  Site: <input name="site"><br>
+  Username: <input name="username"><br>
+  Password: <input name="password"><br>
+  <button type="submit">Save Password</button>
+</form>
+
+<h3>My Passwords:</h3>
+<ul>
+  {% for p in passwords %}
+    <li>
+      <strong>{{ p.site }}</strong> | {{ p.username }} |
+      {{ fernet.decrypt(p.password_encrypted).decode() }}
+    </li>
+  {% endfor %}
+</ul>
+
+<a href="/logout">Logout</a>
+<a href="/change_password">Change Login Password</a> | 
+<a href="/logout">Logout</a>
