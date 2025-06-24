@@ -4,109 +4,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact | Jaimin Parmar</title>
   <style>
-    :root {
-      --link-background: #007BFF;
-      --link-hover-background: #0056b3;
-      --submenu-background: #ffffff;
-    }
-
     body {
-      background: #f4f4f4;
+      background: #f9f9f9;
       margin: 0;
       padding: 20px;
       font-family: 'Poppins', sans-serif;
       text-align: center;
-    }
-
-    a {
-      display: block;
-      background-color: var(--link-background);
-      color: white;
-      padding: 12px;
-      text-decoration: none;
-      border-radius: 6px;
-      font-size: 4.5vw;
-      margin: 10px auto;
-      width: 90%;
-      transition: 0.3s;
-    }
-
-    a:hover {
-      background-color: var(--link-hover-background);
-    }
-
-    .contact-info {
-      position: relative;
-    }
-
-    .submenu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 90%;
-      background: var(--submenu-background);
-      z-index: 10;
-      border-radius: 10px;
-      padding: 10px 0;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .submenu a {
-      background: #f8f8f8;
-      color: #333;
-      margin: 5px auto;
-      border: 1px solid #ccc;
-    }
-
-    .submenu a:hover {
-      background: #e0e0e0;
-    }
-
-    .submenu.show {
-      display: block;
-      animation: fadeIn 0.4s ease;
+      animation: fadeIn 1s ease-in;
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-10px); }
-      to { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 6vw;
+      color: #333;
+    }
+
+    .contact-button {
+      display: block;
+      padding: 12px;
+      color: #333;
+      font-size: 4.5vw;
+      margin: 12px auto;
+      width: 90%;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      text-decoration: none;
+      background-color: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(4px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .contact-button:hover {
+      transform: translateY(-2px);
+      background-color: rgba(255, 255, 255, 0.85);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
     }
   </style>
 </head>
 <body>
-  <div class="contact-info">
-    <a href="#" onclick="toggleSubmenu(event)">Contact Options</a>
-    <div class="submenu" id="submenu">
-      <a href="https://wa.me/+919408144250">WhatsApp</a>
-      <a href="https://www.facebook.com/jaimin.parmar.7393">Facebook</a>
-      <a href="https://www.instagram.com/jaiminparmarofficial/">Instagram</a>
-      <a href="mailto:jaiminparmar024@gmail.com">Email</a>
-      <a href="https://www.linkedin.com/in/jaimin-parmar-495382315">LinkedIn</a>
-      <a href="https://t.me/jaiminparmarofficial">Telegram</a>
-    </div>
-  </div>
+  <h2>Contact Jaimin Parmar</h2>
 
-  <script>
-    function toggleSubmenu(event) {
-      event.preventDefault();
-      event.stopPropagation();
-      const submenu = document.getElementById("submenu");
-      submenu.classList.toggle("show");
-    }
-
-    document.addEventListener("click", function(event) {
-      const submenu = document.getElementById("submenu");
-      if (!event.target.closest(".contact-info")) {
-        submenu.classList.remove("show");
-      }
-    });
-
-    window.addEventListener("scroll", function() {
-      const submenu = document.getElementById("submenu");
-      submenu.classList.remove("show");
-    });
-  </script>
+  <a href="https://wa.me/+919408144250" class="contact-button">WhatsApp</a>
+  <a href="https://www.facebook.com/jaimin.parmar.7393" class="contact-button">Facebook</a>
+  <a href="https://www.instagram.com/jaiminparmarofficial/" class="contact-button">Instagram</a>
+  <a href="mailto:jaiminparmar024@gmail.com" class="contact-button">Email</a>
+  <a href="https://www.linkedin.com/in/jaimin-parmar-495382315" class="contact-button">LinkedIn</a>
+  <a href="https://t.me/jaiminparmarofficial" class="contact-button">Telegram</a>
 </body>
 </html>
