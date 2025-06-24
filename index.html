@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jaimin Parmar</title>
+  <style>
+    :root {
+      --background-color: linear-gradient(to right, #ece9e6, #ffffff);
+      --text-color: #333;
+      --box-background: rgba(255, 204, 128, 0.7);
+      --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      --link-background: #007BFF;
+      --link-hover-background: #0056b3;
+      --contact-background: #fffacd;
+      --contact-text-color: #333;
+      --submenu-background: white;
+      --submenu-link-background: #0084ff;
+      --submenu-link-hover-background: #0056b3;
+      --hr-color: #ccc;
+    }
+    
+    body {
+      background: var(--background-color);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      color: var(--text-color);
+      animation: fadeIn 1.5s ease-in;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    .color-box {
+      background: var(--box-background);
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 6vw;
+      margin: 15px auto;
+      width: 90%;
+      box-shadow: var(--box-shadow);
+      animation: slideIn 1s ease-out;
+    }
+    
+    h1, h2 {
+      font-size: 6vw;
+      margin: 10px 0;
+      color: var(--text-color);
+      animation: fadeIn 2s ease-in;
+    }
+    
+    a {
+      display: block;
+      background-color: var(--link-background);
+      color: white;
+      padding: 10px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 4vw;
+      margin: 8px auto;
+      width: 90%;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+      animation: fadeInUp 1s ease-out;
+      cursor: pointer;
+      border: none;
+    }
+    
+    @keyframes fadeInUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    
+    a:hover {
+      background-color: var(--link-hover-background);
+      transform: scale(1.05);
+    }
+
+    .contact-info {
+      position: relative;
+      margin-bottom: 15px;
+    }
+    
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      background: var(--submenu-background);
+      overflow: hidden;
+      z-index: 10;
+      opacity: 0;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      border-radius: 10px;
+      padding: 10px 0;
+    }
+    
+    .submenu.show {
+      display: block;
+      opacity: 1;
+      transform: translateX(-50%) translateY(5px);
+      animation: fadeIn 0.5s ease-in;
+    }
+    
+    .image-container img {
+      width: 90%;
+      max-width: 100%;
+      height: auto;
+      margin: 15px auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      animation: fadeInZoom 1.5s ease-in;
+    }
+    
+    @keyframes fadeInZoom {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    
+    hr {
+      width: 90%;
+      border: 1px solid var(--hr-color);
+      margin: 20px auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="color-box">
+    <h1>WELCOME TO OUR WEBSITE</h1>
+  </div>
+  
+  <div class="contact-info">
+    <a href="#" onclick="toggleSubmenu(event)">Contact Options</a>
+    <div class="submenu" id="submenu">
+      <a href="https://wa.me/+919408144250">WhatsApp</a>
+      <a href="https://www.facebook.com/jaimin.parmar.7393">Facebook</a>
+      <a href="https://www.instagram.com/jaiminparmarofficial/">Instagram</a>
+      <a href="mailto:jaiminparmar024@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/jaimin-parmar-495382315">LinkedIn</a>
+      <a href="https://t.me/jaiminparmarofficial">Telegram</a> 
+    </div>
+  </div>
+  
+  <div class="image-container">
+    <img src="https://i.postimg.cc/7hxJNDNc/IMG-20250120-160943-1.jpg" alt="Jaimin Parmar" loading="lazy">
+    <img src="https://i.postimg.cc/qBstbj6R/Whats-App-Image-2025-02-27-at-11-13-01-PM.jpg" alt="Jaimin Parmar" loading="lazy">
+    <img src="https://i.postimg.cc/nVGzYrN9/Whats-App-Image-2025-02-27-at-11-13-01-PM-1.jpg" alt="Jaimin Parmar" loading="lazy">
+  </div>
+
+  
+  <button id="downloadBtn"> Download Spotify Premium </button>
+
+  <style>
+    #downloadBtn {
+      background: linear-gradient(to right, #1db954, #1ed760);
+      color: white;
+      padding: 12px 20px;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      display: inline-block;
+      text-align: center;
+      margin-top: 15px;
+    }
+  
+    #downloadBtn:hover {
+      background: linear-gradient(to right, #1ed760, #1db954);
+      transform: scale(1.05);
+      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    }
+  
+    #downloadBtn:active {
+      transform: scale(0.95);
+    }
+  </style>
+  
+  <script>
+    document.getElementById("downloadBtn").addEventListener("click", function() {
+      window.location.href = "https://www.mediafire.com/file/dp8vqqh5iudx8jo/revanced.net_revanced_manager_v2.0.11.apk/file";
+    });
+  </script>
+  
+  <script>
+    function toggleSubmenu(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      const submenu = document.getElementById("submenu");
+      submenu.classList.toggle("show");
+    }
+    
+    document.addEventListener("click", function(event) {
+      const submenu = document.getElementById("submenu");
+      if (!event.target.closest(".contact-info")) {
+        submenu.classList.remove("show");
+      }
+    });
+    
+    window.addEventListener("scroll", function() {
+      const submenu = document.getElementById("submenu");
+      submenu.classList.remove("show");
+    });
+  </script>
+</body>
+</html>
